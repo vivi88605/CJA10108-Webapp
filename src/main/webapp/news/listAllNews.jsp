@@ -10,7 +10,6 @@ List<NewsVO> list = newsSvc.getAll();
 pageContext.setAttribute("list", list);
 %>
 
-
 <html>
 <head>
 <title>最新消息一覽 - listAllNews.jsp</title>
@@ -70,11 +69,11 @@ th, td {
 
 	<table>
 		<tr>
-			<th>最新消息編號</th>
-			<th>最新消息標題</th>
-			<th>最新消息內容</th>
-<!-- 			<th>最新消息圖片</th> -->
-			<th>最新消息上傳時間</th>
+			<th>編號</th>
+			<th>標題</th>
+			<th>內容</th>
+			<!-- 			<th>最新消息圖片</th> -->
+			<th>上傳時間</th>
 			<th>修改</th>
 			<th>刪除</th>
 		</tr>
@@ -86,9 +85,9 @@ th, td {
 				<td>${newsVO.newsId}</td>
 				<td>${newsVO.newsTitle}</td>
 				<td>${newsVO.newsContent}</td>
-<!-- 				<td><img -->
-<%-- 					src="${pageContext.request.contextPath}/news/news.do?action=showImage&newsId=${newsVO.newsId}" --%>
-<!-- 					width="100"></td> -->
+				<!-- 				<td><img -->
+				<%-- 					src="${pageContext.request.contextPath}/news/news.do?action=showImage&newsId=${newsVO.newsId}" --%>
+				<!-- 					width="100"></td> -->
 				<td>${newsVO.newsTime}</td>
 
 				<td>

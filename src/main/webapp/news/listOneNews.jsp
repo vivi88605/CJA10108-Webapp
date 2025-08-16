@@ -65,18 +65,38 @@ th, td {
 
 	<table>
 		<tr>
-			<th>最新消息編號</th>
-			<th>最新消息標題</th>
-			<th>最新消息內容</th>
-<!-- 			<th>最新消息圖片</th> -->
-			<th>最新消息上傳時間</th>
+			<th>編號</th>
+			<th>標題</th>
+			<th>內容</th>
+			<!-- 			<th>最新消息圖片</th> -->
+			<th>上傳時間</th>
+			<th>修改</th>
+			<th>刪除</th>
 		</tr>
 		<tr>
 			<td><%=newsVO.getNewsId()%></td>
 			<td><%=newsVO.getNewsTitle()%></td>
 			<td><%=newsVO.getNewsContent()%></td>
-<%-- 			<td><%=newsVO.getNewsImage()%></td> --%>
+			<%-- 			<td><%=newsVO.getNewsImage()%></td> --%>
 			<td><%=newsVO.getNewsTime()%></td>
+			<td>
+				<FORM METHOD="post"
+					ACTION="<%=request.getContextPath()%>/news/news.do"
+					style="margin-bottom: 0px;">
+					<input type="submit" value="修改"> <input type="hidden"
+						name="newsId" value="${newsVO.newsId}"> <input
+						type="hidden" name="action" value="getOne_For_Update">
+				</FORM>
+			</td>
+			<td>
+				<FORM METHOD="post"
+					ACTION="<%=request.getContextPath()%>/news/news.do"
+					style="margin-bottom: 0px;">
+					<input type="submit" value="刪除"> <input type="hidden"
+						name="newsId" value="${newsVO.newsId}"> <input
+						type="hidden" name="action" value="delete">
+				</FORM>
+			</td>
 		</tr>
 	</table>
 

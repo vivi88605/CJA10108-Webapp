@@ -12,7 +12,7 @@ public class NewsJDBCDAO implements NewsDAO_interface {
 	String driver = "com.mysql.cj.jdbc.Driver";
 	String url = "jdbc:mysql://localhost:3306/islevilla?serverTimezone=Asia/Taipei";
 	String userid = "root";
-	String passwd = "";
+	String passwd = "123456";
 
 	private static final String INSERT_STMT = "INSERT INTO news (news_title, news_content, news_image, news_time) VALUES (?, ?, ?, CURRENT_TIMESTAMP)";
 	private static final String GET_ALL_STMT = "SELECT * FROM news";
